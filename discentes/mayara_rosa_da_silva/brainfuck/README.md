@@ -15,14 +15,15 @@ O programa usa um array de caracteres como memória e um ponteiro para acompanha
 
 # Makefile
 
-CC=gcc: define a variável CC como o compilador padrão, no caso, gcc.
-CFLAGS=-Wall: define a variável CFLAGS como as opções de compilação a serem usadas pelo compilador, no caso, -Wall que habilita todas as opções de aviso.
-SRCDIR=src: define a variável SRCDIR como o diretório onde estão os arquivos-fonte.
-SOURCES=$(wildcard $(SRCDIR)/*.c): define a variável SOURCES como a lista de arquivos-fonte no diretório $(SRCDIR) que terminam com a extensão .c. A função $(wildcard) encontra todos os arquivos que correspondem ao padrão especificado.
-OBJECTS=$(SOURCES:.c=.o): define a variável OBJECTS como a lista de arquivos-objeto correspondentes aos arquivos-fonte listados em $(SOURCES). A função de substituição de sufixos .c=.o altera a extensão dos arquivos de .c para .o.
-EXECUTABLE=program: define a variável EXECUTABLE como o nome do arquivo executável gerado.
+- CC=gcc: define a variável CC como o compilador padrão, no caso, gcc.
+- CFLAGS=-Wall: define a variável CFLAGS como as opções de compilação a serem usadas pelo compilador, no caso, -Wall - que habilita todas as opções de aviso.
+- SRCDIR=src: define a variável SRCDIR como o diretório onde estão os arquivos-fonte.
+- SOURCES=$(wildcard $(SRCDIR)/\*.c): define a variável SOURCES como a lista de arquivos-fonte no diretório $(SRCDIR) que terminam com a extensão .c. A função $(wildcard) encontra todos os arquivos que correspondem ao padrão especificado.
+- OBJECTS=$(SOURCES:.c=.o): define a variável OBJECTS como a lista de arquivos-objeto correspondentes aos arquivos-fonte listados em $(SOURCES). A função de substituição de sufixos .c=.o altera a extensão dos arquivos de .c para .o.
+- EXECUTABLE=program: define a variável EXECUTABLE como o nome do arquivo executável gerado.
 
 ## REFERENCIAS:
 
 - Conversor Brainfuck: https://www.dcode.fr/brainfuck-language
 - Interpretador Base: https://github.com/Camto/Shorterpreters/blob/master/Brainfuck/brainfuck.py
+- http://orion.lcg.ufrj.br/compgraf1/downloads/MakefileTut.pdf
